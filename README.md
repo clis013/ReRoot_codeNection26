@@ -506,6 +506,262 @@ Users can consider different actions:
 
 ---
 
+<a id="different"></a>
+
+# 4. 🌟 What Makes It Different
+
+ReRoot focuses on whether a user's workload is **sustainable based on their current capacity**, rather than simply encouraging them to complete more tasks.
+
+Instead of treating stress, workload and wellbeing as separate problems, ReRoot examines the relationship between **demand, stress and capacity**. This helps users recognise when they should rebalance their responsibilities, reduce their workload or take time to recover.
+
+The following comparison highlights the key features that differentiate ReRoot from existing solutions such as **Headspace** and **Todoist**:
+
+| **Features** | **ReRoot** | **Headspace**<br>*(Mood / Wellness Manager)* | **Todoist**<br>*(Task Manager)* |
+| --- | :---: | :---: | :---: |
+| **Workload Management & Adjustment** | ✅  | ❌  | ✅  |
+| **Demand vs. Capacity Analysis** | ✅  | ❌  | ❌ |
+| **AI Support** | ✅  | ✅  | ✅  |
+| **Emotional Recovery** | ✅  | ✅  | ❌  |
+| **Workload Balance Planning** | ✅  | ❌  | ❌  |
+| **Calendar Integration** | ✅  | ❌  | ✅  |
+| **Stress / Burnout Risk Visualisation** | ✅  | ❌  | ❌  |
+| **Ecosystem Visualisation** | 🌳 Garden | 📊 Charts / Wellness Views | ❌  |
+
+> **Key difference:** ReRoot does not simply ask *“What tasks should I complete?”* or *“How can I feel better?”*  
+> It asks: **“Given what I am carrying and what I currently have available, what should change?”**
+
+<br>
+
+
+
+## 4.1 🌳 Ecosystem Visualisation of User Condition
+
+ReRoot uses an **interactive garden ecosystem** to provide a visual representation of the user's current workload, stress and overall condition.
+
+Instead of presenting the user with numbers and charts immediately, the garden allows users to **recognise their condition at a glance**.
+
+Different elements of the ecosystem represent different aspects of the user's current state:
+
+| **Element** | **Category** | **Element Condition** | **State / Meaning** |
+| --- | --- | --- | --- |
+| 🍃 **Leaves** | Daily State | Green and healthy leaves | 🟢 **Manageable** |
+| 🍃 **Leaves** | Daily State | Yellow leaves | 🟡 **Strained** |
+| 🍂 **Leaves + Broken Branches** | Daily State | Yellow leaves and broken branches | 🔴 **Overloaded** |
+| ☀️ **Weather** | Stress Level | Sunny | 🟢 **Low** |
+| ☁️ **Weather** | Stress Level | Cloudy | 🟡 **Moderate** |
+| 🌧️ **Weather** | Stress Level | Rainy | 🔴 **High** |
+| 🍏 **Apple** | Workload | Green apple — progress < 50% | Workload in progress |
+| 🍎 **Apple** | Workload | Red apple — progress ≥ 50% | Higher workload progress |
+| 🌳 **Tree** | Workload Balance | Tilting tree | ⚖️ **Workload needs balancing** |
+
+### 🌱 Why the Ecosystem Matters
+
+The ecosystem transforms abstract information into a simple visual language:
+
+- **🌳 Tree condition** → Overall workload state
+- **☀️ Weather** → Current perceived stress
+- **🍎 Apples** → Workload records and progress
+- **🍃 Leaves** → Daily condition
+- **🧑‍🌾 Gardener** → The user
+
+This allows users to notice changes in their condition without having to interpret a dashboard first.
+
+> **ReRoot turns workload and stress data into something users can see, understand and respond to.**
+
+<br>
+
+
+
+## 4.2 🐿️ AI Dump Chat & Companion AI
+
+Unlike applications that use AI only as a separate chatbot, ReRoot integrates AI throughout the user's journey.
+
+The AI supports users from the moment they express their concerns until they decide what action to take.
+
+
+
+### 4.2.1 🕳️ Tree Hole AI Chatroom
+
+From the Garden Homepage, users can enter the **Tree Hole**, which serves as the entrance to the **AI Stress Dump Chat**.
+
+The Tree Hole allows users to freely express:
+
+- stressful thoughts,
+- workload,
+- problems,
+- deadlines,
+- emotional concerns,
+- or other situations that are currently bothering them.
+
+Users do **not** need to organise everything into structured categories before starting.
+
+This reduces cognitive effort for users who may already be experiencing high cognitive demand and stress.
+
+### 🤖 How It Works
+
+The AI analyses the user's natural-language input and identifies potentially relevant information such as:
+
+- possible workloads,
+- stress sources,
+- emotional concerns,
+- demands,
+- capacity-related concerns,
+- deadlines and commitments.
+
+The extracted information is **not silently saved**.
+
+Instead:
+
+> **User Input → AI Extraction → User Review → Confirmation → Structured Record**
+
+The user can review, edit or reject the extracted information before it becomes part of their records.
+
+This keeps the user in control while allowing AI to reduce the effort required to organise their thoughts.
+
+<br>
+
+
+
+### 4.2.2 🐿️ Squirrel Companion AI
+
+ReRoot also includes a **Squirrel AI Companion** that follows the user throughout the ReRoot experience.
+
+Rather than acting as a standalone chatbot, the Squirrel provides **contextual support based on the user's current situation**.
+
+It can help users:
+
+- 🌳 understand their current garden condition,
+- 🔍 explain possible reasons for changes in their ecosystem,
+- 📋 discuss current workloads,
+- 💭 identify possible sources of stress,
+- ⚖️ discuss workload balance options,
+- ❓ answer questions about recommendations,
+- 🔄 refine or reconsider proposed actions.
+
+The interaction therefore becomes more than:
+
+> **“Ask the AI → Get an Answer”**
+
+Instead, ReRoot supports a continuous process:
+
+> **Express → Understand → Question → Decide → Act**
+
+The Squirrel AI acts as the user-facing companion across this process, while the underlying system remains responsible for structured data, deterministic calculations and user confirmation.
+
+> **The AI does not replace the user's decision-making. It helps the user understand their situation and explore possible choices.**
+
+<br>
+
+
+
+## 4.3 🌿 Emotional Recovery & Workload Balance Planning
+
+ReRoot provides **two different forms of support** depending on what the user currently needs:
+
+| **User Condition** | **ReRoot Response** |
+| --- | --- |
+| 😮‍💨 Emotional stress or exhaustion | 🌿 **Recovery Support** |
+| ⚖️ Excessive or unbalanced workload | 📝 **Balance Planning** |
+
+This allows ReRoot to respond to the user's condition instead of assuming that every problem should be solved by **completing more tasks or reorganising the schedule**.
+
+
+
+### 4.3.1 🌿 Emotional Recovery Support
+
+When users are experiencing emotional stress or exhaustion, ReRoot provides recovery pathways that allow them to **pause and recover instead of immediately returning to work**.
+
+#### 🕳️ Tree Hole Vent
+
+The **Tree Hole Vent** provides a simple emotional-release activity where users can express their frustration through a shouting interaction.
+
+The purpose is not to solve the user's workload immediately, but to provide a short opportunity to **release emotional tension and pause**.
+
+#### 🎨 Colouring Reflection
+
+**Colouring Reflection** provides another recovery activity.
+
+Users can work on a colouring artwork at their own pace, allowing them to temporarily shift their attention away from stressful thoughts and workload.
+
+These activities are optional and are designed as **recovery support**, rather than being presented as solutions to the user's workload itself.
+
+> **When the user's main need is recovery, ReRoot allows them to rest before asking them to do more.**
+
+<br>
+
+
+
+### 4.3.2 ⚖️ Workload Balance Planning
+
+When the user's main problem is an **excessive or unbalanced workload**, ReRoot provides **Balance Planning** to help determine what should change.
+
+Instead of simply prioritising more tasks, ReRoot considers the user's current workload together with factors such as:
+
+- urgency and importance,
+- deadlines,
+- remaining time,
+- workload demand,
+- available time,
+- energy,
+- perceived control,
+- current stress,
+- and relevant context from the Stress Dump.
+
+Based on this information, ReRoot can suggest possible actions:
+
+| **Action** | **Purpose** |
+| --- | --- |
+| **Keep** | Maintain the workload when it remains manageable. |
+| **Move / Delay** | Move the task to a more suitable time. |
+| **Reconsider** | Question whether the task is still necessary or worth prioritising. |
+| **Reduce** | Decrease the scope or amount of work required. |
+| **Remove** | Remove unnecessary workload from the active plan. |
+| **Recover** | Prioritise restoring resources such as rest and recovery. |
+
+### 👤 User Remains in Control
+
+ReRoot does **not automatically change the user's schedule or workload**.
+
+Instead:
+
+> **System Analysis → AI Suggestions → User Review → User Decision → Confirmed Change**
+
+The AI provides suggestions, explanations and possible trade-offs, while users remain free to:
+
+- question the recommendation,
+- modify the proposed action,
+- reject the suggestion,
+- or confirm the action.
+
+This keeps ReRoot as a **decision-support system rather than an autonomous productivity manager**.
+
+<br>
+
+---
+
+### 🌱 Why These Features Make ReRoot Different
+
+The main difference is that ReRoot connects **workload management, stress awareness, capacity and recovery** within one experience.
+
+Instead of focusing only on:
+
+> **“How can I complete more?”**
+
+or:
+
+> **“How can I feel better?”**
+
+ReRoot focuses on:
+
+> **“What am I carrying, how am I currently doing, and what should change so I can continue sustainably?”**
+
+This creates the core ReRoot journey:
+
+### 🕳️ Dump → 🌳 Recognise → ⚖️ Rebalance
+
+**ReRoot is designed not to help students carry more, but to help them recognise what they can realistically carry.**
+
+---
 
 <br><br>
 
