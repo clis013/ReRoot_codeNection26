@@ -568,7 +568,7 @@ Unlike applications that use AI only as a separate chatbot, ReRoot integrates AI
 
 The AI supports users from the moment they express their concerns until they decide what action to take.
 
-
+<br>
 
 ### 4.2.1 🕳️ Tree Hole AI Chatroom
 
@@ -655,19 +655,20 @@ ReRoot provides **two different forms of support** depending on what the user cu
 
 This allows ReRoot to respond to the user's condition instead of assuming that every problem should be solved by **completing more tasks or reorganising the schedule**.
 
-
+<br>
 
 ### 4.3.1 🌿 Emotional Recovery Support
 
-When users are experiencing emotional stress or exhaustion, ReRoot provides recovery pathways that allow them to **pause and recover instead of immediately returning to work**.
+When users are experiencing emotional stress or exhaustion, ReRoot provides recovery pathways that allow them to pause and recover instead of immediately returning to work.
 
-#### 🕳️ Tree Hole Vent
+#### 1.🕳️ Tree Hole Vent
 
 The **Tree Hole Vent** provides a simple emotional-release activity where users can express their frustration through a shouting interaction.
 
 The purpose is not to solve the user's workload immediately, but to provide a short opportunity to **release emotional tension and pause**.
+<br>
 
-#### 🎨 Colouring Reflection
+#### 2.🎨 Colouring Reflection
 
 **Colouring Reflection** provides another recovery activity.
 
@@ -751,9 +752,9 @@ This creates the core ReRoot journey:
 
 **ReRoot is designed not to help students carry more, but to help them recognise what they can realistically carry.**
 
----
+<br>
 
-<br><br>
+---
 
 <a id="technical"></a>
 
