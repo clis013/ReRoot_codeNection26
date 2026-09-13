@@ -135,9 +135,10 @@ Throughout the process, we kept asking:
 > <i>“How can we help an overwhelmed student not only feel better, but actually understand what is happening and decide what should change?”</i>
 
 <br>
+<details>
+<summary><strong><h3> 🚩 Stage 1 — <i>Two Different Starting Directions</i> </h3></strong></summary>
 
-### 🚩 Stage 1 — <i>Two Different Starting Directions</i>
-
+<br>
 Our ideas start from two perspectives. 
 
 #### 📋 A) Workload & Decision-Making
@@ -159,8 +160,12 @@ Our second direction explored:
 - community sharing.
 
 Neither direction was enough on its own. We decided to create an app that **connect a student's workload with their current state** instead of treating work and wellbeing as two separate problems.
-<br><br>
-### 🚩 Stage 2 — <i>Turning “Balance” Into a Structured Concept</i>
+</details>
+
+<details>
+<summary><strong><h3> 🚩 Stage 2 — <i>Turning “Balance” Into a Structured Concept</i> </h3></strong></summary>
+
+<br>
 
 Our next question was: **What do stress, capacity and balance actually mean?**
 
@@ -191,9 +196,12 @@ We also recognised that **perceived stress matters**. A workload can appear mana
 
 > <i>**Key shift:** We stopped looking only at how much work a user has and started considering the relationship between **demands, resources and perceived stress**.</i>
 
-<br>
+</details>
 
-### 🚩 Stage 3 — <i>Turning Theory Into App Inputs</i>
+<details>
+<summary><strong><h3> 🚩 Stage 3 — <i>Turning Theory Into App Inputs</i> </h3></strong></summary>
+
+<br>
 
 Theory alone was not enough. We needed realistic ways to collect meaningful information **without asking overwhelmed users to complete long assessments every day**. We therefore translated the concepts from our research into lightweight app inputs:
 
@@ -219,8 +227,12 @@ At this stage, ReRoot had become structured enough to:
 
 But another problem appeared...
 **We had too many features.**🤯
-<br><br>
-### 🚩 Stage 4 — <i>From Many Features to One Clear Purpose</i>
+</details>
+
+<details>
+<summary><strong><h3> 🚩 Stage 4 — <i>From Many Features to One Clear Purpose</i> </h3></strong></summary>
+
+<br>
 
 **After Mentor Consultation #1**, we realised that **adding more solutions did not automatically make ReRoot stronger**. Some features were interesting, but they distracted from the main question:
 
@@ -241,8 +253,12 @@ The Balance Planner helps users decide whether something should be:
 Rather than looking only at urgency and importance, ReRoot also considers the user's current condition and resources.
 
 > **Key shift:** Analysis should not be the final output. Analysis should lead to a decision.
-<br><br>
-### 🚩 Stage 5 — <i>Complete, But Not Yet Distinctive</i>
+</details>
+
+<details>
+<summary><strong><h3> 🚩 Stage 5 — <i>Complete, But Not Yet Distinctive</i> </h3></strong></summary>
+
+<br>
 
 With these decisions made, we began building the prototype. Our system now consisted of:
 
@@ -260,8 +276,12 @@ The prototype still felt like a collection of:
 `dashboards` + `cards` + `charts` + `analysis` + `planning tools`
 
 So we began rethinking **how users should experience the system**, rather than changing the underlying logic.
-<br><br>
-### 🚩 Stage 6 — <i>From Dashboard to a Living Ecosystem 🌳</i>
+</details>
+
+<details>
+<summary><strong><h3> 🚩 Stage 6 — <i>From Dashboard to a Living Ecosystem 🌳</i> </h3></strong></summary>
+
+<br>
 
 During earlier brainstorming, we noticed similarities between **apple-tree growth cycles🍎** and sustainable workload management.
 
@@ -297,8 +317,12 @@ The squirrel now stays with the user throughout ReRoot to:
 **Listen → Explain → Answer → Guide**
 
 We deliberately kept the metaphor simple rather than turning ReRoot into a full game. Detailed analysis and planning remain available when users want to go deeper.
-<br><br>
-## 🌱 Final Direction — <i>Dump, Recognise, Rebalance</i>
+</details>
+
+<details>
+<summary><strong><h3> 🌱 Final Direction — <i>Dump, Recognise, Rebalance</i> </h3></strong></summary>
+
+<br>
 
 Throughout this process, ReRoot evolved from a broad collection of stress and task-management ideas into a **decision-support system**.
 
@@ -315,7 +339,7 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 ---
 
 > *ReRoot is not designed to push students to complete as much as possible. It helps them recognise when their current way of working is becoming unsustainable, step outside the immediate chaos, and make better decisions about what they can realistically carry.*
-
+</details>
 <br>
 
 <br>
@@ -345,4 +369,73 @@ Ideas that directly supported this goal were **kept, strengthened or redesigned*
 | **AI-Generated Comic** | ❌ **Dropped**<br>The comic aimed to turn the user's situation into an encouraging story and provide emotional support. However, it required more complex implementation, had a weaker connection to the core workload-balancing problem and risked distracting from the main solution. |
 | **Community Sharing** | ❌ **Dropped**<br>Community interaction could provide emotional support, but it expanded the scope without strongly contributing to ReRoot's main decision-support purpose. |
 | **Music Recommendations** | ❌ **Dropped**<br>Music could support relaxation, but it was a relatively generic wellness feature and contributed less to the core purpose compared with other ideas. |
+
+<br>
+<br>
+<a id="mentor-consultation"></a>
+
+## 2.3 🤝 Mentor Consultation
+
+
+### Mentor Feedback 
+
+
+<details>
+<summary><strong>🧑‍🏫 Mentor Session 1 — Marcus Mah Qing Fung  📅 2/9/2026 </strong></summary>
+
+### 💬 Feedback Received
+
+**Comments**
+- Reduce some features.
+- Users may overestimate the effort required for a workload. The app should help them reconsider how much work is actually needed.
+- UI/UX is important; use stronger UI components and reference platforms such as Dribbble and Motion.
+
+**Suggestions**
+- Connect the AI chatbot with other features in the app.
+- Structure the prototype demo as **scenario → solution → impact**.
+- Record the product and present it clearly in the demo.
+- Consider a Progressive Web App instead of a native mobile app.
+
+**For Later Phases**
+- If we expand beyond university students, frame this as future scalability rather than changing the current target user.
+
+### 🔧 What We Changed
+
+- ❌ Removed the **AI Comic** feature.
+- 📋 Added **subtask recommendations and records** so users can better estimate how much work a workload may require.
+- 🔗 Connected the **AI Stress Dump Chat** to other features such as **Map, Balance and Recovery**.
+- 🎛️ Improved UI components by using more visual and interactive controls rather than relying mainly on text-field input.
+- 🌐 Decided to use **Vercel / Netlify** for prototype deployment during this phase.
+
+</details>
+
+<details>
+<summary><strong>🧑‍🏫 Mentor Session 2 — Sim Hong Bin  📅 9/9/2026 </strong></summary>
+
+### 💬 Feedback Received
+
+**Comments**
+- The app contained too much text.
+- The UI was clean but could make better use of icons and visual elements.
+- The solution was functional, but nothing immediately stood out as distinctive.
+
+**Suggestions**
+- Consider adding a **character or mascot**.
+- Add more **real-time interaction**, including AI responses throughout the user experience.
+- Focus the presentation on only **2–3 main features** to avoid confusing judges.
+- Add something that improves user experience and gives the product a stronger identity.
+- Refine the product with a more competition-focused mindset.
+
+### 🔧 What We Changed
+
+- 🌳 Built the **interactive garden ecosystem** to visualise the user's condition.
+- 🐿️ Introduced the **Squirrel AI Companion**, which stays with users throughout the ReRoot journey and can provide contextual responses and guidance.
+- 🎬 Restructured the demo to focus on a small number of strong core features and follow a clearer **scenario → solution → impact** flow.
+- 👁️ Reduced reliance on text-heavy interfaces and strengthened visual interaction.
+
+</details>
+
+
+
+> **Notes:** The first mentor session helped us **reduce and connect the system**, while the second pushed us to make ReRoot **more distinctive, visual and competition-focused**.
 
