@@ -1,4 +1,5 @@
 # 🌱 ReRoot by Chilli PanMee
+<img src="https://drive.google.com/file/d/1SEbyP7D1rTgkbAb0KoTXyvC3ku263U_M/view?usp=drive_link" width="420">
 
 **Team:** Nicole Lee · Crystal Yap Wen Jing  
 **Problem Statement:** Stress & Workload Manager  
@@ -30,28 +31,31 @@ University students often juggle classes, assignments, examinations, extracurric
 
 ### 🎯 Our Target Users
 
-> **University students managing multiple overlapping commitments, especially those who are still trying to keep everything running but are beginning to feel overloaded.**
+> <i>**University students managing multiple overlapping commitments, especially those who are still trying to keep everything running but are beginning to feel overloaded.**</i>
 
 ### ❓Where Existing Solutions Fall Short
 
 Existing tools often address only one side of the problem.
 
-| Productivity Tools | Wellness Tools |
+| Productivity Tools | Mental Wellness App |
 | --- | --- |
-| Organise tasks, schedules and deadlines | Support mindfulness, stress management and emotional wellbeing |
 | Example: **Todoist** | Example: **Headspace** |
+| Organise tasks, schedules and deadlines | Support mindfulness, stress management and emotional wellbeing |
+
 
 However, when stress comes from an imbalance between a student's workload and the resources they currently have available, the key question remains:
 
-> **“Given what I am carrying right now, what should actually change within what I can realistically handle?”**
+> “Given what I am carrying right now, what should actually change within what I can realistically handle?”**
 
-**ReRoot is designed around this gap.** Rather than maximising productivity, ReRoot helps students recognise imbalance earlier and make more sustainable decisions about **workload, priorities and recovery**.
+**Let's see how ReRoot is designed around this gap!** 
 <br> <br>
 ## 🌱 Our Solution
 
-**ReRoot is a stress and workload decision-support app that represents the user's situation as a living virtual garden.**
+ReRoot is a stress and **workload decision-support app** that represents the user's situation as a **living virtual garden.**
 
-It combines **workload information, daily self-reported state and natural stress-dump conversations** to help determine whether the user's current situation is: **🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
+It combines **workload information, daily self-reported state and natural stress-dump conversations** to help determine whether the user's current situation is: 
+
+**🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
 
 Instead of asking an already overwhelmed student to organise and analyse everything manually, ReRoot helps turn unstructured thoughts into clearer information and actionable guidance. It then helps the user decide what should **stay, move, change or pause**.
 
@@ -59,10 +63,11 @@ Instead of asking an already overwhelmed student to organise and analyse everyth
 
 > **Dump → Recognise → Rebalance**
 
-<br><br>
+<br>
+
 ## ✨ Core Features
 
-### Interactive Garden 🌳
+### 1. Interactive Garden 🌳
 
 The garden gives users an immediate visual overview of their current condition.
 
@@ -75,7 +80,7 @@ The garden gives users an immediate visual overview of their current condition.
 
 Instead of starting with numbers and dashboards, users can first **recognise their condition at a glance**.
 
-### Tree Hole & Squirrel AI Companion 🕳️🐿️
+### 2. Tree Hole & Squirrel AI Companion 🕳️🐿️
 
 The **Tree Hole** is a chatroom where users can dump stressful thoughts naturally without organising everything first.
 
@@ -88,17 +93,17 @@ The Squirrel AI helps to:
 
 The squirrel also stays available throughout ReRoot as a **floating contextual AI companion**, allowing users to ask questions and adjust plans across the app.
 
-### Balance Planner 📝
+### 3. Balance Planner 📝
 
 The Balance Planner turns understanding into **decisions**.
 
 Instead of only telling users that they are overloaded, ReRoot helps them review what should be:
 
-**Keep · Delay · Reconsider · Reduce · Remove · Recover**
+<i>**Keep · Delay · Reconsider · Reduce · Remove · Recover**</i>
 
 The planner considers **deadlines, workload demands, available time, user condition and available resources**.
 
-> **The goal is not to fill every free hour, but to create a plan the user can realistically sustain.**
+<br>
 
 ## 🧩 Supporting Features
 
@@ -109,12 +114,14 @@ The planner considers **deadlines, workload demands, available time, user condit
 | **Workload Records & Calendar** | Provides structured workload and scheduling information |
 | **Recovery Activities** | Optional Tree Vent and Colouring Reflection activities when recovery is needed |
 
+<br>
 
 ---
 
 <p align="center"><strong>FROM THE PROBLEM → TO HOW REROOT EVOLVED</strong></p>
 
 ---
+<br>
 
 <a id="ideation-process"></a>
 # 2. 🧠 Ideation & Process
@@ -125,17 +132,19 @@ ReRoot did not begin as a virtual garden. It evolved through multiple rounds of 
 
 Throughout the process, we kept asking:
 
-> **“How can we help an overwhelmed student not only feel better, but actually understand what is happening and decide what should change?”**
-<br><br>
-### 🚩 Stage 1 — Two Different Starting Directions
+> <i>“How can we help an overwhelmed student not only feel better, but actually understand what is happening and decide what should change?”</i>
 
-Our first ideas approached the challenge from two perspectives. 
+<br>
+
+### 🚩 Stage 1 — <i>Two Different Starting Directions</i>
+
+Our ideas start from two perspectives. 
 
 #### 📋 A) Workload & Decision-Making
 
-We noticed that students may understand every individual task, yet lose sight of their overall condition once everything piles up.
+We noticed that students may understand every individual task, yet lose sight of their overall condition once everything piles up. Our initial flow was: 
 
-Our initial flow was: Dump → Understand → Reality Check → Balance → Recover
+Dump → Understand → Reality Check → Balance → Recover
 
 The aim was to understand what was weighing on the user, compare demands with available resources and help them decide what to do next.
 
@@ -149,17 +158,13 @@ Our second direction explored:
 - music recommendations,
 - community sharing.
 
-Neither direction was enough on its own.
-
-> **ReRoot should connect a student's workload with their current state instead of treating work and wellbeing as two separate problems.**
+Neither direction was enough on its own. We decided to create an app that **connect a student's workload with their current state** instead of treating work and wellbeing as two separate problems.
 <br><br>
-### 🚩 Stage 2 — Turning “Balance” Into a Structured Concept
+### 🚩 Stage 2 — <i>Turning “Balance” Into a Structured Concept</i>
 
 Our next question was: **What do stress, capacity and balance actually mean?**
 
-We could not assume:
-
-> **More tasks = more stress.**
+🚫We could not assume: **More tasks = more stress.**
 
 People can experience the same workload differently depending on their coping ability, energy, control, recovery and available resources.
 
@@ -171,8 +176,8 @@ We therefore researched:
 
 Using the **JD-R model** as one of our main references:
 
-> **Demands = what the user currently has to handle**  
-> **Resources = what the user currently has available to cope with those demands**
+> Demands = what the user currently has to handle  
+> Resources = what the user currently has available to cope with those demands
 
 #### JD-R Concept Diagram
 
@@ -184,13 +189,13 @@ Using the **JD-R model** as one of our main references:
 
 We also recognised that **perceived stress matters**. A workload can appear manageable on paper while still feeling overwhelming to the person carrying it.
 
-> **Key shift:** We stopped looking only at how much work a user has and started considering the relationship between **demands, resources and perceived stress**.
-<br><br>
-### 🚩 Stage 3 — Turning Theory Into App Inputs
+> <i>**Key shift:** We stopped looking only at how much work a user has and started considering the relationship between **demands, resources and perceived stress**.</i>
 
-Theory alone was not enough. We needed realistic ways to collect meaningful information **without asking overwhelmed users to complete long assessments every day**.
+<br>
 
-We therefore translated the concepts from our research into lightweight app inputs:
+### 🚩 Stage 3 — <i>Turning Theory Into App Inputs</i>
+
+Theory alone was not enough. We needed realistic ways to collect meaningful information **without asking overwhelmed users to complete long assessments every day**. We therefore translated the concepts from our research into lightweight app inputs:
 
 | **App Input** | **Purpose** | **What It Provides** |
 | --- | --- | --- |
@@ -200,6 +205,8 @@ We therefore translated the concepts from our research into lightweight app inpu
 | 📅 **Calendar Context** | Understand real scheduling constraints | Existing commitments, available time and scheduling context |
 
 The **Daily Check-In** was inspired by an EMA-adapted Perceived Stress Scale, while **NASA-TLX concepts** were referenced when considering workload assessment.
+
+<br>
 
 ### 🔥 Our First Complete System
 
@@ -211,16 +218,13 @@ At this stage, ReRoot had become structured enough to:
 - suggest possible actions.
 
 But another problem appeared...
-
-**We had too many features.**
+**We had too many features.**🤯
 <br><br>
-### 🚩 Stage 4 — From Many Features to One Clear Purpose
+### 🚩 Stage 4 — <i>From Many Features to One Clear Purpose</i>
 
-**After Mentor Consultation #1**
+**After Mentor Consultation #1**, we realised that **adding more solutions did not automatically make ReRoot stronger**. Some features were interesting, but they distracted from the main question:
 
-We realised that **adding more solutions did not automatically make ReRoot stronger**. Some features were interesting, but they distracted from the main question:
-
-> **“What should the user actually do when their current situation is no longer sustainable?”**
+> <i>“What should the user actually do when their current situation is no longer sustainable?”</i>
 
 So we reduced the scope.
 
@@ -232,35 +236,34 @@ So we reduced the scope.
 
 The Balance Planner helps users decide whether something should be:
 
-**Keep · Delay / Move · Reconsider · Reduce · Remove · Recover**
+**<i>Keep · Delay / Move · Reconsider · Reduce · Remove · Recover**</i>
 
 Rather than looking only at urgency and importance, ReRoot also considers the user's current condition and resources.
 
-> **Key shift: Analysis should not be the final output. Analysis should lead to a decision.**
+> **Key shift:** Analysis should not be the final output. Analysis should lead to a decision.
 <br><br>
-### 🚩 Stage 5 — Complete, But Not Yet Distinctive
+### 🚩 Stage 5 — <i>Complete, But Not Yet Distinctive</i>
 
-With these decisions made, we began building the prototype.
+With these decisions made, we began building the prototype. Our system now consisted of:
 
-Our system now consisted of:
+- Daily Check-In
+- Stress Dump
+- Workload Records 
+- Analysis
+- Balance Planning
+- Recovery
 
-**Daily Check-In · Stress Dump · Workload Records · Analysis · Balance Planning · Recovery**
-
-Functionally, the concept worked.
-
-However, after our second mentor consultation we identified another weakness:
-
-> **ReRoot had useful functions, but the experience did not yet have a strong identity that made it immediately memorable.**
+Functionally, the concept worked. However, after our second mentor consultation we identified another weakness... ReRoot had useful functions, but the experience **did not yet have a strong identity that made it immediately memorable.**
 
 The prototype still felt like a collection of:
 
-`dashboards` · `cards` · `charts` · `analysis` · `planning tools`
+`dashboards` + `cards` + `charts` + `analysis` + `planning tools`
 
 So we began rethinking **how users should experience the system**, rather than changing the underlying logic.
 <br><br>
-### 🚩 Stage 6 — From Dashboard to a Living Ecosystem 🌳
+### 🚩 Stage 6 — <i>From Dashboard to a Living Ecosystem 🌳</i>
 
-During earlier brainstorming, we noticed similarities between **apple-tree growth cycles** and sustainable workload management.
+During earlier brainstorming, we noticed similarities between **apple-tree growth cycles🍎** and sustainable workload management.
 
 When an apple tree carries too much fruit, it consumes significant resources. Orchard management practices such as **fruit thinning** reduce excessive load and help support healthier long-term growth.
 
@@ -283,9 +286,7 @@ This inspired the visual metaphor for ReRoot.
 
 [🔗 View full brainstorm](https://drive.google.com/file/d/1O8Q2ZJqxIsL7SMV8dMNYccr076AuLjxF/view?usp=sharing)
 
-The old dashboard-style homepage became an **interactive living garden**.
-
-The garden also connected previously separate features into one experience:
+The old dashboard-style homepage became an **interactive living garden!** The garden also connected previously separate features into one experience:
 - The original **Tree Hole release idea** became the **Tree Hole Chatroom**
 - The original chatbot became the **Squirrel AI Companion**
 - The tree became a visual representation of workload condition
@@ -295,13 +296,9 @@ The squirrel now stays with the user throughout ReRoot to:
 
 **Listen → Explain → Answer → Guide**
 
-We deliberately kept the metaphor simple rather than turning ReRoot into a full game.
-
-> **The garden is not the analysis itself. It is a simpler way for users to recognise what the underlying system is telling them.**
-
-Detailed analysis and planning remain available when users want to go deeper.
+We deliberately kept the metaphor simple rather than turning ReRoot into a full game. Detailed analysis and planning remain available when users want to go deeper.
 <br><br>
-## 🌱 Final Direction — Dump, Recognise, Rebalance
+## 🌱 Final Direction — <i>Dump, Recognise, Rebalance</i>
 
 Throughout this process, ReRoot evolved from a broad collection of stress and task-management ideas into a **decision-support system**.
 
@@ -320,7 +317,7 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 > *ReRoot is not designed to push students to complete as much as possible. It helps them recognise when their current way of working is becoming unsustainable, step outside the immediate chaos, and make better decisions about what they can realistically carry.*
 
 <br>
----
+
 <br>
 
 <a id="ideas-considered"></a>
@@ -329,7 +326,7 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 
 We focused on one main goal throughout our refinement:
 
-> **Help users recognise overload and make better decisions about what should change.**
+> <i>Help users recognise overload and make better decisions about what should change.</i>
 
 Ideas that directly supported this goal were **kept, strengthened or redesigned**. Others were reduced to supporting features or removed to keep ReRoot focused and feasible.
 
