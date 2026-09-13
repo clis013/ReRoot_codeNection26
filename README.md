@@ -84,14 +84,8 @@ Instead of starting with numbers and dashboards, users can first **recognise the
 
 The **Tree Hole** is a chatroom where users can dump stressful thoughts naturally without organising everything first.
 
-The Squirrel AI helps to:
-- identify possible workloads and deadlines,
-- identify demands and major stressors,
-- connect new information with existing records,
-- explain what is contributing to the user's current condition,
-- guide the user toward an appropriate next step.
+The Squirrel AI provides **contextual explanations and assistance**, helping users understand their current situation and adjust their workload or plans accordingly. It remains available throughout ReRoot as a **floating AI companion**, supporting users whenever they need guidance.
 
-The squirrel also stays available throughout ReRoot as a **floating contextual AI companion**, allowing users to ask questions and adjust plans across the app.
 
 ### 3. Balance Planner 📝
 
@@ -485,7 +479,7 @@ Users enter the **Tree Hole** to freely express their stressful thoughts, worklo
 ReRoot analyses the information provided by the user and helps them understand their current workload, stress level and overall condition.
 
 <p align="center">
-  <img src="./assets/2.understand.png" alt="ReRoot Understand Process" width="800">
+  <img src="./assets/2.recognise.png" alt="ReRoot Understand Process" width="800">
 </p>
 
 ### ⚖️ 3. Rebalance
@@ -820,292 +814,68 @@ The garden does not replace the underlying analysis. It provides a simpler way f
 
 ---
 
-## 5.3 🤖 AI Architecture
+## 5.3 🤖 AI & Core Decision Logic
 
-ReRoot separates AI responsibilities instead of using one generic chatbot for everything.
+ReRoot uses the *same Gemini API* across different parts of the app, but with different prompts and context depending on the task.
 
-All AI roles use the **same Gemini API**. Each feature sends different context and prompts depending on its responsibility.
-
-| **AI Role** | **Responsibilities** | **Does Not Do** |
-| --- | --- | --- |
-| 🕳️ **Stress Dump AI** | Conversation, contextual understanding, candidate workload/stressor extraction and proposed structured updates | Does not silently save extracted data |
-| 🧠 **Analysis AI** | Interprets deterministic facts, explains contributors and constraints, contextualises confirmed information and recent patterns | Does not invent missing facts or determine system state alone |
-| ⚖️ **Balance AI** | Proposes candidate actions, explains trade-offs and suggests scope or schedule changes | Does not automatically apply changes |
-
-There is **no separate Map AI**. The Analysis Map displays the shared analysis produced by the same system.
-
-The 🐿️ **Squirrel AI Companion** is the user-facing personality that exposes these AI capabilities contextually across the app.
-
-### 📌 AI Responsibility Diagram
-
-```mermaid
-flowchart LR
-
-    DUMP["🕳️ Tree Hole<br/>Stress Dump"]
-    SDAI["Stress Dump AI"]
-    EXTRACT["Candidate Extraction"]
-    REVIEW["👤 User Review"]
-    DATA["Confirmed Structured Data"]
-
-    SYSTEM["⚙️ Deterministic<br/>System Processing"]
-    FACTS["System Facts"]
-
-    AAI["Analysis AI"]
-    EXPLAIN["Natural-Language<br/>Explanation"]
-
-    TRIGGER["👤 Restore Balance"]
-    BAI["Balance AI"]
-    ACTIONS["Candidate Actions<br/>Keep · Move · Reduce<br/>Remove · Reconsider · Recover"]
-    CONFIRM["👤 User Confirmation"]
-
-    GEMINI["🤖 Same Gemini API"]
-
-    DUMP --> SDAI
-    SDAI --> EXTRACT
-    EXTRACT --> REVIEW
-    REVIEW --> DATA
-    DATA --> SYSTEM
-    SYSTEM --> FACTS
-    FACTS --> AAI
-    AAI --> EXPLAIN
-
-    EXPLAIN --> TRIGGER
-    TRIGGER --> BAI
-    BAI --> ACTIONS
-    ACTIONS --> CONFIRM
-
-    GEMINI -.-> SDAI
-    GEMINI -.-> AAI
-    GEMINI -.-> BAI
-```
-
----
-
-## 5.4 🧠 Core Analysis & Balance Logic
-
-ReRoot does not reduce the user's situation into one artificial score. Instead, the system considers several independent signals and uses them together to understand whether the current situation appears **manageable, strained or overloaded**.
-
-### Analysis Inputs
-
-| **Category** | **Signals Considered** |
+| *AI Role* | *Purpose* |
 | --- | --- |
-| **User State** | Perceived Stress, Energy, Perceived Control, Emotion |
-| **Workload Demand** | Cognitive Demand, Emotional Demand, Physical Demand, Remaining Time, Deadline, Flexibility |
-| **Time Context** | Fixed / Busy Calendar events, Protected Rest, Planning / Focus Blocks, Available Scheduling Time |
-| **Context** | Confirmed Stress Dump information, workload relationships and recent patterns |
+| 🕳️ *Stress Dump AI* | Understands natural conversation and extracts possible workloads, stressors and updates for user confirmation |
+| 🧠 *Analysis AI* | Explains system-generated facts, contributors and patterns in natural language |
+| ⚖️ *Balance AI* | Suggests possible workload adjustments and explains trade-offs |
 
-### Important Analysis Rules
+AI does not directly become the source of truth. Important extracted information and persistent changes require *user confirmation*.
 
-- **High Stress ≠ automatically Overloaded**
-- **Low Energy ≠ automatically Overloaded**
-- **Largest Workload Area ≠ automatically the main stress source**
-- Missing data remains **unknown** instead of being guessed
-- AI explains system-generated evidence rather than replacing the calculation layer
+### Core Analysis Logic
 
-The system uses these signals to derive evidence for:
+ReRoot does not determine the user's condition from one score alone.
 
-**🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
+It considers information from:
 
-### Balance Planner Logic
+- *User State* — stress, energy, perceived control and emotion
+- *Workload Demand* — cognitive, emotional and physical demand, deadlines and remaining time
+- *Time Context* — existing commitments and available scheduling time
+- *Confirmed Context* — relevant information from Stress Dump conversations
 
-Balance answers:
+These signals help the system determine whether the current situation appears:
 
-> **“Given what ReRoot currently understands, what could change to make the plan more sustainable?”**
+*🟢 Manageable · 🟡 Strained · 🔴 Overloaded*
 
-Balance runs only after explicit user intent, such as pressing **Restore Balance** or asking the Squirrel for planning support.
+Important rules include:
 
-Relevant inputs include:
+- *High Stress ≠ automatically Overloaded*
+- *Low Energy ≠ automatically Overloaded*
+- Missing data remains unknown instead of being guessed
 
-- urgency and importance,
-- deadline and Remaining Time,
-- flexibility,
-- Cognitive / Emotional / Physical Demand,
-- available scheduling time,
-- Energy,
-- Perceived Control,
-- current Stress when available,
-- confirmed Stress Dump context.
+### Balance Planner
 
-### Candidate Actions
+When the user chooses *Restore Balance*, ReRoot considers factors such as urgency, importance, deadlines, flexibility, workload demand, available time and current user state.
 
-| **Action** | **Meaning** |
-| --- | --- |
-| **Keep** | Keep workload and current schedule unchanged |
-| **Move / Delay** | Change when the work is handled |
-| **Reduce** | Reduce scope or expected effort |
-| **Remove** | Drop the workload from the active plan |
-| **Reconsider** | Re-evaluate whether, when or how the commitment should be handled |
-| **Recover** | Prioritise restoring resources such as rest, breaks or other recovery |
+It then suggests possible actions:
 
-The **Eisenhower Matrix** may be used as one supporting reference for urgency and importance, but it is not the whole decision system.
+*Keep · Move / Delay · Reduce · Remove · Reconsider · Recover*
 
-ReRoot also considers **demands, resources, feasibility and recovery**.
-
-### 📌 Balance Decision Diagram
-
-```mermaid
-flowchart TD
-
-    A["Urgency & Importance"]
-    B["Remaining Time & Deadline"]
-    C["Flexibility"]
-    D["Cognitive / Emotional / Physical Demand"]
-    E["Energy & Perceived Control"]
-    F["Available Scheduling Time"]
-    G["Confirmed Stress Dump Context"]
-
-    LOGIC["⚙️ Balance Decision Logic"]
-
-    A --> LOGIC
-    B --> LOGIC
-    C --> LOGIC
-    D --> LOGIC
-    E --> LOGIC
-    F --> LOGIC
-    G --> LOGIC
-
-    LOGIC --> AI["🤖 Gemini<br/>Explain Options & Trade-offs"]
-
-    AI --> KEEP["Keep"]
-    AI --> MOVE["Move / Delay"]
-    AI --> REDUCE["Reduce"]
-    AI --> REMOVE["Remove"]
-    AI --> RECONSIDER["Reconsider"]
-    AI --> RECOVER["Recover"]
-
-    KEEP --> USER["👤 User Chooses"]
-    MOVE --> USER
-    REDUCE --> USER
-    REMOVE --> USER
-    RECONSIDER --> USER
-    RECOVER --> USER
-```
+Gemini helps explain the options and trade-offs, while the user remains responsible for the final decision.
 
 ---
 
 ## 5.5 🚧 Current Prototype & Build Plan
 
-The current prototype is **frontend-first** and already demonstrates the complete ReRoot journey, including workload records, Daily Check-In processing, garden states, Tree Hole interaction, Analysis Map and Balance Planner interfaces.
+The current prototype is *frontend-first* and already demonstrates the complete ReRoot journey, including workload records, Daily Check-In processing, garden states, Tree Hole interaction, Analysis Map and Balance Planner interfaces.
 
-Some outputs, especially deeper analysis, AI extraction and Balance recommendations, are currently **staged for the demo rather than dynamically generated**. The build phase will therefore focus on connecting the existing frontend to real persistence, deterministic processing and external APIs while preserving the current user experience.
+Some outputs, especially deeper analysis, AI extraction and Balance recommendations, are currently *staged for the demo rather than dynamically generated*. The build phase will therefore focus on connecting the existing frontend to real persistence, deterministic processing and external APIs while preserving the current user experience.
 
-<details>
-<summary><strong>🚩 Phase 1 — Backend Foundation</strong></summary>
-
-Build the **Node.js + Express + TypeScript** API layer and connect it to the existing frontend.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 2 — Supabase & Structured Data</strong></summary>
-
-Implement storage for:
-
-- users,
-- Daily Check-Ins,
-- workloads,
-- subtasks,
-- confirmed Stress Dump information,
-- analysis state,
-- Balance proposals.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 3 — Deterministic Core Logic</strong></summary>
-
-Implement rules that should not depend on AI, including:
-
-- Daily Check-In scoring,
-- Energy and Control categories,
-- workload demand representation,
-- deadline-window feasibility,
-- workload and demand distribution,
-- Manageable / Strained / Overloaded evidence,
-- missing-data handling.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 4 — Stress Dump AI</strong></summary>
-
-Connect Gemini to:
-
-- understand natural language,
-- identify candidate stress factors,
-- identify possible new workloads,
-- identify existing-workload updates,
-- suggest subtasks,
-- return proposed structured data for user confirmation.
-
-Only confirmed information will enter persistent data.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 5 — Analysis AI</strong></summary>
-
-Use Gemini to interpret system-generated facts and explain:
-
-- current workload state,
-- main constraints,
-- main contributors,
-- Stress–Load mismatch,
-- relevant patterns.
-
-AI will explain the system facts rather than replace the deterministic analysis layer.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 6 — Balance Planner</strong></summary>
-
-Implement candidate decision logic for:
-
-**Keep · Move / Delay · Reduce · Remove · Reconsider · Recover**
-
-Gemini will support natural-language explanation and trade-off discussion.
-
-Only selected and confirmed actions will change persistent state.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 7 — Google Calendar Integration</strong></summary>
-
-For MVP, import Google Calendar events as **Fixed / Busy time**.
-
-These events will affect:
-
-- available scheduling time,
-- time feasibility,
-- Balance decisions.
-
-Automatic Calendar writeback is not required for the initial MVP.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 8 — Frontend–Backend Integration</strong></summary>
-
-Replace staged prototype behaviour with:
-
-- persistent records,
-- live system calculations,
-- dynamic AI explanations,
-- contextual Squirrel responses,
-- real Balance proposals.
-
-</details>
-
-<details>
-<summary><strong>🚩 Phase 9 — End-to-End Testing</strong></summary>
-
-Test the main ReRoot journey:
-
-> **Garden → Tree Hole → Confirm Information → Analyse → Recognise → Restore Balance → Review → Apply → Refresh**
-
-</details>
+| *Phase* | *Focus* |
+| --- | --- |
+| 🚩 *1. Backend Foundation* | Build the *Node.js + Express + TypeScript* API layer and connect it to the existing frontend. |
+| 🚩 *2. Supabase & Structured Data* | Store users, Daily Check-Ins, workloads, subtasks, confirmed Stress Dump information, analysis state and Balance proposals. |
+| 🚩 *3. Deterministic Core Logic* | Implement non-AI rules for Check-In scoring, Energy and Control categories, workload demand, deadline-window feasibility, workload/demand distribution, Manageable / Strained / Overloaded evidence and missing-data handling. |
+| 🚩 *4. Stress Dump AI* | Connect Gemini to understand natural language, identify candidate stress factors, workloads, updates and subtasks, then return proposed structured data for user confirmation. |
+| 🚩 *5. Analysis AI* | Use Gemini to interpret system-generated facts and explain workload state, constraints, contributors, Stress–Load mismatch and relevant patterns. |
+| 🚩 *6. Balance Planner* | Implement *Keep · Move / Delay · Reduce · Remove · Reconsider · Recover* decision logic, with Gemini supporting explanations and trade-off discussion. |
+| 🚩 *7. Google Calendar Integration* | Import Google Calendar events as *Fixed / Busy time* to support scheduling availability, time feasibility and Balance decisions. |
+| 🚩 *8. Frontend–Backend Integration* | Replace staged prototype behaviour with persistent records, live system calculations, dynamic AI explanations, contextual Squirrel responses and real Balance proposals. |
+| 🚩 *9. End-to-End Testing* | Test the full flow: *Garden → Tree Hole → Confirm Information → Analyse → Recognise → Restore Balance → Review → Apply → Refresh*. |
 
 ---
 
@@ -1131,8 +901,8 @@ To keep the implementation realistic within the hackathon timeline, we will prio
 
 ### ⏳ Outside Current MVP Scope
 
-We will **not be implementing** features that require significantly more validation, automation or production infrastructure during this hackathon phase.
+We will *not be implementing* features that require significantly more validation, automation or production infrastructure during this hackathon phase.
 
-This includes **clinical burnout diagnosis, fully autonomous scheduling or workload changes, custom-trained AI models, large social/community systems, advanced prediction, and production-scale deployment**.
+This includes *clinical burnout diagnosis, fully autonomous scheduling or workload changes, custom-trained AI models, large social/community systems, advanced prediction, and production-scale deployment*.
 
-By deliberately keeping these features out of scope, we can focus on making the core **Dump → Recognise → Rebalance** journey work reliably end-to-end.
+By deliberately keeping these features out of scope, we can focus on making the core *Dump → Recognise → Rebalance* journey work reliably end-to-end.
