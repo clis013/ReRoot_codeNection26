@@ -459,3 +459,414 @@ Ideas that directly supported this goal were **kept, strengthened or redesigned*
 
 > **Notes:** The first mentor session helped us **reduce and connect the system**, while the second pushed us to make ReRoot **more distinctive, visual and competition-focused**.
 
+<br><br>
+
+<a id="technical"></a>
+
+# 5. ⚙️ Technical Architecture & Feasibility
+
+ReRoot is designed as a **decision-support system**, not an autonomous productivity scheduler. The system separates structured user data, deterministic calculations and AI interpretation so that important decisions remain explainable and under user control.
+
+Our processing flow is:
+
+> **Raw Input → Confirmed Structured Data → System Processing → AI Interpretation → AI Recommendation → User Confirmation → Persistent Change**
+
+<br>
+
+## 5.1 🛠️ Tech Stack
+
+### Frontend
+
+| **Component** | **Technology** | **Why We Chose It** |
+| --- | --- | --- |
+| **Frontend** | React + Vite + TypeScript | Supports the highly interactive ReRoot interface, including the garden ecosystem, Tree Hole chat, workload records, Analysis Map and Balance Planner. TypeScript also provides stronger data consistency as the application grows. |
+| **Deployment** | Vercel | Fast deployment and GitHub integration make it suitable for rapid hackathon iteration. |
+
+### Backend, Data & External Services
+
+| **Component** | **Technology** | **Why We Chose It** |
+| --- | --- | --- |
+| **Backend API** | Node.js + Express + TypeScript | Keeps the frontend and backend in the same language ecosystem and provides a lightweight API layer between ReRoot, Supabase and external services. |
+| **Database & Authentication** | Supabase | Provides authentication and relational data storage, reducing development overhead because we do not need to build these services from scratch. |
+| **AI Service** | Gemini API | Used for Stress Dump extraction, interpretation of system facts, contextual explanations and Balance planning suggestions. |
+| **Calendar Integration** | Google Calendar API | Provides existing commitments and Fixed/Busy time so ReRoot has more context about actual scheduling availability. |
+| **Deployment** | Vercel / suitable backend hosting | Frontend will be deployed through Vercel. Backend deployment will depend on whether we use a serverless-compatible API structure or a separate Node.js service. |
+
+---
+
+## 5.2 🧱 System Architecture
+
+ReRoot does not allow the LLM to directly control the application. The system first produces **known or deterministically derived facts using defined rules**, then allows AI to interpret these facts according to the product's concepts and constraints.
+
+### 📌 System Architecture Diagram
+
+```mermaid
+flowchart LR
+
+    U([👤 User])
+
+    FE["🌱 ReRoot Frontend<br/>React + Vite + TypeScript"]
+
+    subgraph BE["⚙️ Backend — Node.js + Express"]
+        direction TB
+
+        INPUT["Confirmed Structured Data"]
+        LOGIC["Deterministic Processing<br/>• Check-In Scoring<br/>• Workload Processing<br/>• Time Feasibility<br/>• Demand Analysis"]
+        FACTS["System Facts<br/>Manageable / Strained / Overloaded"]
+        INTERPRET["AI Interpretation"]
+        BALANCE["Balance Recommendations"]
+        CONFIRM["User Review & Confirmation"]
+
+        INPUT --> LOGIC
+        LOGIC --> FACTS
+        FACTS --> INTERPRET
+        INTERPRET --> BALANCE
+        BALANCE --> CONFIRM
+    end
+
+    GEMINI["🤖 Gemini API"]
+    DB[("🗄️ Supabase<br/>Database + Auth")]
+    CAL["📅 Google Calendar API"]
+
+    U --> FE
+    FE -->|"API Requests"| INPUT
+
+    CAL -->|"Fixed / Busy Events"| LOGIC
+
+    FACTS -->|"Context + Facts"| GEMINI
+    GEMINI -->|"Interpretation"| INTERPRET
+
+    BALANCE -->|"Planning Prompt"| GEMINI
+    GEMINI -->|"Suggestions"| BALANCE
+
+    CONFIRM -->|"Persistent Changes"| DB
+    DB -->|"Stored User Data"| INPUT
+```
+
+The **garden homepage** acts as a low-cognitive-load visualisation layer above the system:
+
+- 🌳 **Tree condition** → Demand–Resource Status
+- ☀️🌧️ **Weather** → Current perceived stress
+- 🍎 **Apples** → Workload records
+- 🐿️ **Squirrel** → Contextual AI interaction
+
+The garden does not replace the underlying analysis. It provides a simpler way for users to recognise what the system is telling them.
+
+---
+
+## 5.3 🤖 AI Architecture
+
+ReRoot separates AI responsibilities instead of using one generic chatbot for everything.
+
+All AI roles use the **same Gemini API**. Each feature sends different context and prompts depending on its responsibility.
+
+| **AI Role** | **Responsibilities** | **Does Not Do** |
+| --- | --- | --- |
+| 🕳️ **Stress Dump AI** | Conversation, contextual understanding, candidate workload/stressor extraction and proposed structured updates | Does not silently save extracted data |
+| 🧠 **Analysis AI** | Interprets deterministic facts, explains contributors and constraints, contextualises confirmed information and recent patterns | Does not invent missing facts or determine system state alone |
+| ⚖️ **Balance AI** | Proposes candidate actions, explains trade-offs and suggests scope or schedule changes | Does not automatically apply changes |
+
+There is **no separate Map AI**. The Analysis Map displays the shared analysis produced by the same system.
+
+The 🐿️ **Squirrel AI Companion** is the user-facing personality that exposes these AI capabilities contextually across the app.
+
+### 📌 AI Responsibility Diagram
+
+```mermaid
+flowchart LR
+
+    DUMP["🕳️ Tree Hole<br/>Stress Dump"]
+    SDAI["Stress Dump AI"]
+    EXTRACT["Candidate Extraction"]
+    REVIEW["👤 User Review"]
+    DATA["Confirmed Structured Data"]
+
+    SYSTEM["⚙️ Deterministic<br/>System Processing"]
+    FACTS["System Facts"]
+
+    AAI["Analysis AI"]
+    EXPLAIN["Natural-Language<br/>Explanation"]
+
+    TRIGGER["👤 Restore Balance"]
+    BAI["Balance AI"]
+    ACTIONS["Candidate Actions<br/>Keep · Move · Reduce<br/>Remove · Reconsider · Recover"]
+    CONFIRM["👤 User Confirmation"]
+
+    GEMINI["🤖 Same Gemini API"]
+
+    DUMP --> SDAI
+    SDAI --> EXTRACT
+    EXTRACT --> REVIEW
+    REVIEW --> DATA
+    DATA --> SYSTEM
+    SYSTEM --> FACTS
+    FACTS --> AAI
+    AAI --> EXPLAIN
+
+    EXPLAIN --> TRIGGER
+    TRIGGER --> BAI
+    BAI --> ACTIONS
+    ACTIONS --> CONFIRM
+
+    GEMINI -.-> SDAI
+    GEMINI -.-> AAI
+    GEMINI -.-> BAI
+```
+
+---
+
+## 5.4 🧠 Core Analysis & Balance Logic
+
+ReRoot does not reduce the user's situation into one artificial score. Instead, the system considers several independent signals and uses them together to understand whether the current situation appears **manageable, strained or overloaded**.
+
+### Analysis Inputs
+
+| **Category** | **Signals Considered** |
+| --- | --- |
+| **User State** | Perceived Stress, Energy, Perceived Control, Emotion |
+| **Workload Demand** | Cognitive Demand, Emotional Demand, Physical Demand, Remaining Time, Deadline, Flexibility |
+| **Time Context** | Fixed / Busy Calendar events, Protected Rest, Planning / Focus Blocks, Available Scheduling Time |
+| **Context** | Confirmed Stress Dump information, workload relationships and recent patterns |
+
+### Important Analysis Rules
+
+- **High Stress ≠ automatically Overloaded**
+- **Low Energy ≠ automatically Overloaded**
+- **Largest Workload Area ≠ automatically the main stress source**
+- Missing data remains **unknown** instead of being guessed
+- AI explains system-generated evidence rather than replacing the calculation layer
+
+The system uses these signals to derive evidence for:
+
+**🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
+
+### Balance Planner Logic
+
+Balance answers:
+
+> **“Given what ReRoot currently understands, what could change to make the plan more sustainable?”**
+
+Balance runs only after explicit user intent, such as pressing **Restore Balance** or asking the Squirrel for planning support.
+
+Relevant inputs include:
+
+- urgency and importance,
+- deadline and Remaining Time,
+- flexibility,
+- Cognitive / Emotional / Physical Demand,
+- available scheduling time,
+- Energy,
+- Perceived Control,
+- current Stress when available,
+- confirmed Stress Dump context.
+
+### Candidate Actions
+
+| **Action** | **Meaning** |
+| --- | --- |
+| **Keep** | Keep workload and current schedule unchanged |
+| **Move / Delay** | Change when the work is handled |
+| **Reduce** | Reduce scope or expected effort |
+| **Remove** | Drop the workload from the active plan |
+| **Reconsider** | Re-evaluate whether, when or how the commitment should be handled |
+| **Recover** | Prioritise restoring resources such as rest, breaks or other recovery |
+
+The **Eisenhower Matrix** may be used as one supporting reference for urgency and importance, but it is not the whole decision system.
+
+ReRoot also considers **demands, resources, feasibility and recovery**.
+
+### 📌 Balance Decision Diagram
+
+```mermaid
+flowchart TD
+
+    A["Urgency & Importance"]
+    B["Remaining Time & Deadline"]
+    C["Flexibility"]
+    D["Cognitive / Emotional / Physical Demand"]
+    E["Energy & Perceived Control"]
+    F["Available Scheduling Time"]
+    G["Confirmed Stress Dump Context"]
+
+    LOGIC["⚙️ Balance Decision Logic"]
+
+    A --> LOGIC
+    B --> LOGIC
+    C --> LOGIC
+    D --> LOGIC
+    E --> LOGIC
+    F --> LOGIC
+    G --> LOGIC
+
+    LOGIC --> AI["🤖 Gemini<br/>Explain Options & Trade-offs"]
+
+    AI --> KEEP["Keep"]
+    AI --> MOVE["Move / Delay"]
+    AI --> REDUCE["Reduce"]
+    AI --> REMOVE["Remove"]
+    AI --> RECONSIDER["Reconsider"]
+    AI --> RECOVER["Recover"]
+
+    KEEP --> USER["👤 User Chooses"]
+    MOVE --> USER
+    REDUCE --> USER
+    REMOVE --> USER
+    RECONSIDER --> USER
+    RECOVER --> USER
+```
+
+---
+
+## 5.5 🚧 Current Prototype & Build Plan
+
+The current prototype is **frontend-first** and already demonstrates the complete ReRoot journey, including workload records, Daily Check-In processing, garden states, Tree Hole interaction, Analysis Map and Balance Planner interfaces.
+
+Some outputs, especially deeper analysis, AI extraction and Balance recommendations, are currently **staged for the demo rather than dynamically generated**. The build phase will therefore focus on connecting the existing frontend to real persistence, deterministic processing and external APIs while preserving the current user experience.
+
+<details>
+<summary><strong>🚩 Phase 1 — Backend Foundation</strong></summary>
+
+Build the **Node.js + Express + TypeScript** API layer and connect it to the existing frontend.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 2 — Supabase & Structured Data</strong></summary>
+
+Implement storage for:
+
+- users,
+- Daily Check-Ins,
+- workloads,
+- subtasks,
+- confirmed Stress Dump information,
+- analysis state,
+- Balance proposals.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 3 — Deterministic Core Logic</strong></summary>
+
+Implement rules that should not depend on AI, including:
+
+- Daily Check-In scoring,
+- Energy and Control categories,
+- workload demand representation,
+- deadline-window feasibility,
+- workload and demand distribution,
+- Manageable / Strained / Overloaded evidence,
+- missing-data handling.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 4 — Stress Dump AI</strong></summary>
+
+Connect Gemini to:
+
+- understand natural language,
+- identify candidate stress factors,
+- identify possible new workloads,
+- identify existing-workload updates,
+- suggest subtasks,
+- return proposed structured data for user confirmation.
+
+Only confirmed information will enter persistent data.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 5 — Analysis AI</strong></summary>
+
+Use Gemini to interpret system-generated facts and explain:
+
+- current workload state,
+- main constraints,
+- main contributors,
+- Stress–Load mismatch,
+- relevant patterns.
+
+AI will explain the system facts rather than replace the deterministic analysis layer.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 6 — Balance Planner</strong></summary>
+
+Implement candidate decision logic for:
+
+**Keep · Move / Delay · Reduce · Remove · Reconsider · Recover**
+
+Gemini will support natural-language explanation and trade-off discussion.
+
+Only selected and confirmed actions will change persistent state.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 7 — Google Calendar Integration</strong></summary>
+
+For MVP, import Google Calendar events as **Fixed / Busy time**.
+
+These events will affect:
+
+- available scheduling time,
+- time feasibility,
+- Balance decisions.
+
+Automatic Calendar writeback is not required for the initial MVP.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 8 — Frontend–Backend Integration</strong></summary>
+
+Replace staged prototype behaviour with:
+
+- persistent records,
+- live system calculations,
+- dynamic AI explanations,
+- contextual Squirrel responses,
+- real Balance proposals.
+
+</details>
+
+<details>
+<summary><strong>🚩 Phase 9 — End-to-End Testing</strong></summary>
+
+Test the main ReRoot journey:
+
+> **Garden → Tree Hole → Confirm Information → Analyse → Recognise → Restore Balance → Review → Apply → Refresh**
+
+</details>
+
+---
+
+## 5.6 🎯 Build Scope
+
+To keep the implementation realistic within the hackathon timeline, we will prioritise the features required to demonstrate ReRoot's core value.
+
+### ✅ In Scope
+
+- user authentication,
+- Daily Check-In,
+- workload and subtask records,
+- Tree Hole / Stress Dump AI,
+- candidate extraction and confirmation,
+- deterministic stress and workload processing,
+- Analysis Map,
+- Manageable / Strained / Overloaded interpretation,
+- Balance Planner,
+- contextual Squirrel AI,
+- one-way Google Calendar import,
+- persistent storage,
+- user confirmation before persistent changes.
+
+### ⏳ Outside Current MVP Scope
+
+We will **not be implementing** features that require significantly more validation, automation or production infrastructure during this hackathon phase.
+
+This includes **clinical burnout diagnosis, fully autonomous scheduling or workload changes, custom-trained AI models, large social/community systems, advanced prediction, and production-scale deployment**.
+
+By deliberately keeping these features out of scope, we can focus on making the core **Dump → Recognise → Rebalance** journey work reliably end-to-end.
