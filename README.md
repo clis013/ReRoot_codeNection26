@@ -1,5 +1,7 @@
 # 🌱 ReRoot by Chilli PanMee
-<img src="https://drive.google.com/file/d/1SEbyP7D1rTgkbAb0KoTXyvC3ku263U_M/view?usp=drive_link" width="420">
+<p align="center">
+  <img src="./assets/2.recognise.png" alt="ReRoot Understand Process" width="420">
+</p>
 
 **Team:** Nicole Lee · Crystal Yap Wen Jing  
 **Problem Statement:** Stress & Workload Manager  
