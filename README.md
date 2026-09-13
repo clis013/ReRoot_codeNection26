@@ -14,7 +14,7 @@
 - [1. Project Overview](#project-overview)
   - [1.1 The Problem](#the-problem)
   - [1.2 Our Solution](#our-solution)
-  - [Core Features](#core-features)
+  - [1.3 Core Features](#core-features)
   - [1.4 Supporting Features](#supporting-features)
 - [2. Ideation & Process](#ideation-process)
   - [2.1 Evolution of Our Idea](#evolution)
@@ -74,7 +74,7 @@ It combines **workload information, daily self-reported state and natural stress
 
 Instead of asking an already overwhelmed student to organise and analyse everything manually, ReRoot helps turn unstructured thoughts into clearer information and actionable guidance. It then helps the user decide what should **stay, move, change or pause**.
 
-### 1.3 Core Experience
+### Core Experience
 
 > **Dump → Recognise → Rebalance**
 
@@ -82,7 +82,7 @@ Instead of asking an already overwhelmed student to organise and analyse everyth
 
 <a id="core-features"></a>
 
-## ✨ Core Features
+## ✨ 1.3 Core Features
 
 ### 1. Interactive Garden 🌳
 
