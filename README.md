@@ -1,6 +1,6 @@
 # 🌱 ReRoot by Chilli PanMee
 <p align="center">
-  <img src="./assets/2.recognise.png" alt="ReRoot Understand Process" width="420">
+  <img src="./assets/ReRoot.png" alt="ReRoot Understand Process" width="420">
 </p>
 
 **Team:** Nicole Lee · Crystal Yap Wen Jing  
