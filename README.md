@@ -161,6 +161,8 @@ Our second direction explored:
 - community sharing.
 
 Neither direction was enough on its own. We decided to create an app that **connect a student's workload with their current state** instead of treating work and wellbeing as two separate problems.
+<br><br>
+
 </details>
 
 <details>
@@ -198,6 +200,7 @@ We also recognised that **perceived stress matters**. A workload can appear mana
 
 > <i>**Key shift:** We stopped looking only at how much work a user has and started considering the relationship between **demands, resources and perceived stress**.</i>
 
+<br>
 </details>
 
 <details>
@@ -230,6 +233,8 @@ At this stage, ReRoot had become structured enough to:
 
 But another problem appeared...
 **We had too many features.**🤯
+
+<br>
 </details>
 
 <details>
@@ -257,6 +262,8 @@ The Balance Planner helps users decide whether something should be:
 Rather than looking only at urgency and importance, ReRoot also considers the user's current condition and resources.
 
 > **Key shift:** Analysis should not be the final output. Analysis should lead to a decision.
+
+<br>
 </details>
 
 <details>
@@ -281,6 +288,8 @@ The prototype still felt like a collection of:
 `dashboards` + `cards` + `charts` + `analysis` + `planning tools`
 
 So we began rethinking **how users should experience the system**, rather than changing the underlying logic.
+
+<br>
 </details>
 
 <details>
@@ -323,6 +332,8 @@ The squirrel now stays with the user throughout ReRoot to:
 **Listen → Explain → Answer → Guide**
 
 We deliberately kept the metaphor simple rather than turning ReRoot into a full game. Detailed analysis and planning remain available when users want to go deeper.
+
+<br>
 </details>
 
 <details>
@@ -346,6 +357,8 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 ---
 
 > *ReRoot is not designed to push students to complete as much as possible. It helps them recognise when their current way of working is becoming unsustainable, step outside the immediate chaos, and make better decisions about what they can realistically carry.*
+
+<br>
 </details>
 <br>
 
