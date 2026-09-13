@@ -458,6 +458,54 @@ Ideas that directly supported this goal were **kept, strengthened or redesigned*
 
 
 > **Notes:** The first mentor session helped us **reduce and connect the system**, while the second pushed us to make ReRoot **more distinctive, visual and competition-focused**.
+<br><br>
+<a id="design-prototype"></a>
+
+# 3. 🎨 Design & Prototype
+
+### UI Prototype
+
+🌐 **Live Prototype:** https://codenection-chi.vercel.app
+
+The following screenshots demonstrate the three main processes of ReRoot:
+
+**Dump → Understand → Rebalance**
+
+### 🕳️ 1. Dump
+
+Users enter the **Tree Hole** to freely express their stressful thoughts, workload or concerns through natural conversation with the Squirrel AI.
+
+<p align="center">
+  <img src="./assets/1.DUMP.png" alt="ReRoot Dump Process" width="800">
+</p>
+
+
+### 🌳 2. Understand
+
+ReRoot analyses the information provided by the user and helps them understand their current workload, stress level and overall condition.
+
+<p align="center">
+  <img src="./assets/2.understand.png" alt="ReRoot Understand Process" width="800">
+</p>
+
+### ⚖️ 3. Rebalance
+
+Based on the user's current condition and workload, the **Balance Planner** helps users decide what actions they can take to better manage their workload.
+
+Users can consider different actions:
+
+- **Keep** – Continue the task when it is still manageable.
+- **Delay** – Move the task to a later time when appropriate.
+- **Reconsider** – Think about whether the task is still necessary or worth prioritising.
+- **Reduce** – Decrease the scope or amount of work.
+- **Remove** – Remove tasks that are unnecessary.
+
+<p align="center">
+  <img src="./assets/3.rebalance.png" alt="ReRoot Rebalance Process" width="800">
+</p>
+
+---
+
 
 <br><br>
 
