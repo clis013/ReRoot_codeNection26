@@ -845,7 +845,7 @@ Gemini helps explain the options and trade-offs, while the user remains responsi
 
 ---
 
-## 5.5 🚧 Current Prototype & Build Plan
+## 5.4 🚧 Current Prototype & Build Plan
 
 The current prototype is *frontend-first* and already demonstrates the complete ReRoot journey, including workload records, Daily Check-In processing, garden states, Tree Hole interaction, Analysis Map and Balance Planner interfaces.
 
@@ -865,7 +865,7 @@ Some outputs, especially deeper analysis, AI extraction and Balance recommendati
 
 ---
 
-## 5.6 🎯 Build Scope
+## 5.5 🎯 Build Scope
 
 To keep the implementation realistic within the hackathon timeline, we will prioritise the features required to demonstrate ReRoot's core value.
 
