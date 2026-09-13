@@ -6,16 +6,27 @@
 📊 **Presentation Slides:** https://canva.link/1mewsuir2oo7zmh
 
 ---
+## 📌 Table of Contents
 
+- [1. Project Overview](#project-overview)
+  - [The Problem](#the-problem)
+  - [Our Solution](#our-solution)
+  - [Core Features](#core-features)
+  - [Supporting Features](#supporting-features)
+- [2. Ideation & Process](#ideation-process)
+  - [2.1 Evolution of Our Idea](#evolution)
+  - [2.2 Ideas We Considered](#ideas-considered)
+  - [2.3 Mentor Consultation](#mentor-consultation)
+- [3. Design & Prototype](#design-prototype)
+- [4. What Makes It Different](#different)
+- [5. Technical Architecture & Feasibility](#technical)
+---
+<a id="project-overview"></a>
 # 1. Project Overview
-
+<a id="the-problem"></a>
 ## 💭 The Problem
 
-University students often juggle classes, assignments, examinations, extracurricular responsibilities, social commitments and personal needs at the same time.
-
-When these demands accumulate, the problem becomes more than simply having **“too much to do.”** Students can lose the mental space to step back, understand their overall condition, recognise when their workload is becoming unsustainable, and decide what should actually change.
-
-Instead, they may simply react to whichever task feels most urgent and continue pushing through limited time and energy. This can lead to **poor prioritisation, ignored mental and physical strain, and an increasingly unsustainable workload.**
+University students often juggle classes, assignments, examinations, extracurricular responsibilities, social commitments and personal needs at the same time. When these demands accumulate, the problem becomes more than simply having **“too much to do.”** Students can lose the mental space to step back, understand their overall condition, recognise when their workload is becoming unsustainable, and decide what should actually change. Instead, they may simply react to whichever task feels most urgent and continue pushing through limited time and energy. This can lead to **poor prioritisation, ignored mental and physical strain, and an increasingly unsustainable workload.**
 
 ### 🎯 Our Target Users
 
@@ -40,16 +51,15 @@ However, when stress comes from an imbalance between a student's workload and th
 
 **ReRoot is a stress and workload decision-support app that represents the user's situation as a living virtual garden.**
 
-It combines **workload information, daily self-reported state and natural stress-dump conversations** to help determine whether the user's current situation is:
-
-**🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
+It combines **workload information, daily self-reported state and natural stress-dump conversations** to help determine whether the user's current situation is: **🟢 Manageable · 🟡 Strained · 🔴 Overloaded**
 
 Instead of asking an already overwhelmed student to organise and analyse everything manually, ReRoot helps turn unstructured thoughts into clearer information and actionable guidance. It then helps the user decide what should **stay, move, change or pause**.
 
 ### Core Experience
 
 > **Dump → Recognise → Rebalance**
-<br> <br>
+
+<br><br>
 ## ✨ Core Features
 
 ### Interactive Garden 🌳
@@ -106,9 +116,9 @@ The planner considers **deadlines, workload demands, available time, user condit
 
 ---
 
-
+<a id="ideation-process"></a>
 # 2. 🧠 Ideation & Process
-
+<a id="evolution"></a>
 ## 2.1 Evolution of Our Idea
 
 ReRoot did not begin as a virtual garden. It evolved through multiple rounds of **discussion → research → mentor feedback → prototyping → refinement**.
@@ -119,19 +129,17 @@ Throughout the process, we kept asking:
 <br><br>
 ### 🚩 Stage 1 — Two Different Starting Directions
 
-Our first ideas approached the challenge from two perspectives.
+Our first ideas approached the challenge from two perspectives. 
 
-#### 📋 Workload & Decision-Making
+#### 📋 A) Workload & Decision-Making
 
 We noticed that students may understand every individual task, yet lose sight of their overall condition once everything piles up.
 
-Our initial flow was:
-
-> **Dump → Understand → Reality Check → Balance → Recover**
+Our initial flow was: Dump → Understand → Reality Check → Balance → Recover
 
 The aim was to understand what was weighing on the user, compare demands with available resources and help them decide what to do next.
 
-#### 💭 Emotional Support & Stress Relief
+#### 💭 B) Emotional Support & Stress Relief
 
 Our second direction explored:
 - AI chat companion,
@@ -310,3 +318,34 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 ---
 
 > *ReRoot is not designed to push students to complete as much as possible. It helps them recognise when their current way of working is becoming unsustainable, step outside the immediate chaos, and make better decisions about what they can realistically carry.*
+
+<br>
+---
+<br>
+
+<a id="ideas-considered"></a>
+
+## 2.2 Ideas We Considered
+
+We focused on one main goal throughout our refinement:
+
+> **Help users recognise overload and make better decisions about what should change.**
+
+Ideas that directly supported this goal were **kept, strengthened or redesigned**. Others were reduced to supporting features or removed to keep ReRoot focused and feasible.
+
+| **Idea** | **Decision & Reason** |
+| --- | --- |
+| **Stress Dump Chat** | ✅ **Kept & Redesigned — Core**<br>We kept it as an easy entry point for users to express stressful thoughts without organising everything first. AI identifies possible workloads, stressors and demands. It later evolved into the **Tree Hole Chatroom**. |
+| **Balance Planner** | ✅ **Kept & Strengthened — Core**<br>Analysis alone does not solve the problem. The Balance Planner turns insights into decisions and guides users toward the next action. |
+| **Interactive Garden** | ✨ **Added — Core**<br>Provides an interactive visual representation of the user's state and connects previously separate features into one cohesive experience. |
+| **Squirrel AI Companion** | ✨ **Added — Core**<br>The AI originally existed only inside Stress Dump Chat. We expanded it into a persistent companion that provides explanations, answers questions and guides users throughout ReRoot. |
+| **Stress & Workload Analysis** | ✅ **Kept — Strong Supporting Feature**<br>Provides deeper perspectives on major stressors, workload demands, time feasibility and trends. We kept the detailed analysis behind the simpler garden overview so users can explore it when needed without being overwhelmed immediately. |
+| **Daily Check-In** | ✅ **Kept — Supporting Feature**<br>Provides lightweight self-reported information about stress, control, mental demand, coping confidence, emotion and energy without requiring a long daily assessment. |
+| **Workload Records** | ✅ **Kept — Supporting Feature**<br>Structured workload information is necessary for understanding demands and generating realistic analysis and planning recommendations. |
+| **Calendar Integration** | ✅ **Kept — Supporting Context**<br>Provides additional context about existing commitments, available time and scheduling constraints to improve planning feasibility. |
+| **Tree Hole Vent** | 🌿 **Kept — Optional Recovery Feature**<br>A simple stress-release interaction where users can shout and trigger animations. It remains optional because it supports emotional release but is not central to workload balancing. |
+| **Colouring Reflection** | 🌿 **Kept — Optional Recovery Feature**<br>Provides a simple pause and recovery activity, so it remains a secondary feature rather than part of the main decision-support flow. |
+| **AI-Generated Comic** | ❌ **Dropped**<br>The comic aimed to turn the user's situation into an encouraging story and provide emotional support. However, it required more complex implementation, had a weaker connection to the core workload-balancing problem and risked distracting from the main solution. |
+| **Community Sharing** | ❌ **Dropped**<br>Community interaction could provide emotional support, but it expanded the scope without strongly contributing to ReRoot's main decision-support purpose. |
+| **Music Recommendations** | ❌ **Dropped**<br>Music could support relaxation, but it was a relatively generic wellness feature and contributed less to the core purpose compared with other ideas. |
+
