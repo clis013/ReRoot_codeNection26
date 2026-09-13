@@ -1,6 +1,6 @@
 # 🌱 ReRoot by Chilli PanMee
-<p align="center">
-  <img src="./assets/ReRoot.png" alt="ReRoot Understand Process" width="420">
+<p align="left">
+  <img src="./assets/ReRoot.png" alt="ReRoot Understand Process" width="200">
 </p>
 
 **Team:** Nicole Lee · Crystal Yap Wen Jing  
@@ -12,22 +12,32 @@
 ## 📌 Table of Contents
 
 - [1. Project Overview](#project-overview)
-  - [The Problem](#the-problem)
-  - [Our Solution](#our-solution)
+  - [1.1 The Problem](#the-problem)
+  - [1.2 Our Solution](#our-solution)
   - [Core Features](#core-features)
-  - [Supporting Features](#supporting-features)
+  - [1.4 Supporting Features](#supporting-features)
 - [2. Ideation & Process](#ideation-process)
   - [2.1 Evolution of Our Idea](#evolution)
   - [2.2 Ideas We Considered](#ideas-considered)
   - [2.3 Mentor Consultation](#mentor-consultation)
 - [3. Design & Prototype](#design-prototype)
 - [4. What Makes It Different](#different)
+  - [4.1 Ecosystem Visualisation of User Condition](#ecosystem-visualisation)
+  - [4.2 AI Dump Chat & Companion AI](#ai-companion)
+  - [4.3 Emotional Recovery & Workload Balance Planning](#recovery-balance)
 - [5. Technical Architecture & Feasibility](#technical)
+  - [5.1 Tech Stack](#tech-stack)
+  - [5.2 System Architecture](#system-architecture)
+  - [5.3 AI & Core Decision Logic](#ai-core-logic)
+  - [5.4 Current Prototype & Build Plan](#prototype-build-plan)
+  - [5.5 Build Scope](#build-scope)
 ---
 <a id="project-overview"></a>
+
 # 1. Project Overview
 <a id="the-problem"></a>
-## 💭 The Problem
+
+## 💭 1.1 The Problem
 
 University students often juggle classes, assignments, examinations, extracurricular responsibilities, social commitments and personal needs at the same time. When these demands accumulate, the problem becomes more than simply having **“too much to do.”** Students can lose the mental space to step back, understand their overall condition, recognise when their workload is becoming unsustainable, and decide what should actually change. Instead, they may simply react to whichever task feels most urgent and continue pushing through limited time and energy. This can lead to **poor prioritisation, ignored mental and physical strain, and an increasingly unsustainable workload.**
 
@@ -51,7 +61,10 @@ However, when stress comes from an imbalance between a student's workload and th
 
 **Let's see how ReRoot is designed around this gap!** 
 <br> <br>
-## 🌱 Our Solution
+
+<a id="our-solution"></a>
+
+## 🌱 1.2 Our Solution
 
 ReRoot is a stress and **workload decision-support app** that represents the user's situation as a **living virtual garden.**
 
@@ -61,11 +74,13 @@ It combines **workload information, daily self-reported state and natural stress
 
 Instead of asking an already overwhelmed student to organise and analyse everything manually, ReRoot helps turn unstructured thoughts into clearer information and actionable guidance. It then helps the user decide what should **stay, move, change or pause**.
 
-### Core Experience
+### 1.3 Core Experience
 
 > **Dump → Recognise → Rebalance**
 
 <br>
+
+<a id="core-features"></a>
 
 ## ✨ Core Features
 
@@ -101,7 +116,9 @@ The planner considers **deadlines, workload demands, available time, user condit
 
 <br>
 
-## 🧩 Supporting Features
+<a id="supporting-features"></a>
+
+## 🧩 1.4 Supporting Features
 
 | Feature | Purpose |
 | --- | --- |
@@ -120,8 +137,10 @@ The planner considers **deadlines, workload demands, available time, user condit
 <br>
 
 <a id="ideation-process"></a>
+
 # 2. 🧠 Ideation & Process
 <a id="evolution"></a>
+
 ## 2.1 Evolution of Our Idea
 
 ReRoot did not begin as a virtual garden. It evolved through multiple rounds of **discussion → research → mentor feedback → prototyping → refinement**.
@@ -356,7 +375,6 @@ Throughout this process, ReRoot evolved from a broad collection of stress and ta
 
 <br>
 </details>
-<br>
 
 <br>
 
@@ -383,11 +401,11 @@ Ideas that directly supported this goal were **kept, strengthened or redesigned*
 | **Tree Hole Vent** | 🌿 **Kept — Optional Recovery Feature**<br>A simple stress-release interaction where users can shout and trigger animations. It remains optional because it supports emotional release but is not central to workload balancing. |
 | **Colouring Reflection** | 🌿 **Kept — Optional Recovery Feature**<br>Provides a simple pause and recovery activity, so it remains a secondary feature rather than part of the main decision-support flow. |
 | **AI-Generated Comic** | ❌ **Dropped**<br>The comic aimed to turn the user's situation into an encouraging story and provide emotional support. However, it required more complex implementation, had a weaker connection to the core workload-balancing problem and risked distracting from the main solution. |
-| **Community Sharing** | ❌ **Dropped**<br>Community interaction could provide emotional support, but it expanded the scope without strongly contributing to ReRoot's main decision-support purpose. |
-| **Music Recommendations** | ❌ **Dropped**<br>Music could support relaxation, but it was a relatively generic wellness feature and contributed less to the core purpose compared with other ideas. |
+| **Community Sharing** | ❌ **Dropped**<br>Community interaction could provide emotional support, but it expanded the scope and does not strongly contribute to ReRoot's main decision-support purpose. |
+| **Music Recommendations** | ❌ **Dropped**<br>Music could support relaxation, but it was a mainly a wellness feature and contributed less to the core purpose compared with other ideas. |
 
 <br>
-<br>
+
 <a id="mentor-consultation"></a>
 
 ## 2.3 🤝 Mentor Consultation
@@ -454,7 +472,8 @@ Ideas that directly supported this goal were **kept, strengthened or redesigned*
 
 
 > **Notes:** The first mentor session helped us **reduce and connect the system**, while the second pushed us to make ReRoot **more distinctive, visual and competition-focused**.
-<br><br>
+<br>
+
 <a id="design-prototype"></a>
 
 # 3. 🎨 Design & Prototype
@@ -530,6 +549,8 @@ The following comparison highlights the key features that differentiate ReRoot f
 
 ---
 
+<a id="ecosystem-visualisation"></a>
+
 ## 4.1 🌳 Ecosystem Visualisation of User Condition
 
 ReRoot uses an **interactive garden ecosystem** to provide a visual representation of the user's current workload, stress and overall condition.
@@ -562,13 +583,13 @@ This allows users to notice changes in their condition without having to interpr
 
 ---
 
+<a id="ai-companion"></a>
+
 ## 4.2 🐿️ AI Dump Chat & Companion AI
 
 Unlike applications that use AI only as a separate chatbot, ReRoot integrates AI throughout the user's journey.
 
 The AI supports users from the moment they express their concerns until they decide what action to take.
-
-<br>
 
 ### 4.2.1 🕳️ Tree Hole AI Chatroom
 
@@ -643,6 +664,8 @@ The Squirrel AI acts as the user-facing companion across this process, while the
 <br>
 
 ---
+
+<a id="recovery-balance"></a>
 
 ## 4.3 🌿 Emotional Recovery & Workload Balance Planning
 
@@ -768,6 +791,8 @@ Our processing flow is:
 
 <br>
 
+<a id="tech-stack"></a>
+
 ## 5.1 🛠️ Tech Stack
 
 ### Frontend
@@ -789,6 +814,8 @@ Our processing flow is:
 
 ---
 
+<a id="system-architecture"></a>
+
 ## 5.2 🧱 System Architecture
 
 ReRoot does not allow the LLM to directly control the application. The system first produces **known or deterministically derived facts using defined rules**, then allows AI to interpret these facts according to the product's concepts and constraints.
@@ -801,23 +828,22 @@ ReRoot does not allow the LLM to directly control the application. The system fi
 
 ---
 
+<a id="ai-core-logic"></a>
+
 ## 5.3 🤖 AI & Core Decision Logic
 
 ReRoot uses the *same Gemini API* across different parts of the app, but with different prompts and context depending on the task.
 
-| *AI Role* | *Purpose* |
+| **AI Role** | **Purpose** |
 | --- | --- |
-| 🕳️ *Stress Dump AI* | Understands natural conversation and extracts possible workloads, stressors and updates for user confirmation |
-| 🧠 *Analysis AI* | Explains system-generated facts, contributors and patterns in natural language |
-| ⚖️ *Balance AI* | Suggests possible workload adjustments and explains trade-offs |
+| 🕳️ **Stress Dump AI** | Understands natural conversation and extracts possible workloads, stressors and updates for user confirmation |
+| 🧠 **Analysis AI** | Explains system-generated facts, contributors and patterns in natural language |
+| ⚖️ **Balance AI** | Suggests possible workload adjustments and explains trade-offs |
 
-AI does not directly become the source of truth. Important extracted information and persistent changes require *user confirmation*.
 
 ### Core Analysis Logic
 
-ReRoot does not determine the user's condition from one score alone.
-
-It considers information from:
+ReRoot does not determine the user's condition by considering information from:
 
 - *User State* — stress, energy, perceived control and emotion
 - *Workload Demand* — cognitive, emotional and physical demand, deadlines and remaining time
@@ -846,25 +872,29 @@ Gemini helps explain the options and trade-offs, while the user remains responsi
 
 ---
 
+<a id="prototype-build-plan"></a>
+
 ## 5.4 🚧 Current Prototype & Build Plan
 
 The current prototype is *frontend-first* and already demonstrates the complete ReRoot journey, including workload records, Daily Check-In processing, garden states, Tree Hole interaction, Analysis Map and Balance Planner interfaces.
 
 Some outputs, especially deeper analysis, AI extraction and Balance recommendations, are currently *staged for the demo rather than dynamically generated*. The build phase will therefore focus on connecting the existing frontend to real persistence, deterministic processing and external APIs while preserving the current user experience.
 
-| *Phase* | *Focus* |
+| **Phase** | **Focus** |
 | --- | --- |
-| 🚩 *1. Backend Foundation* | Build the *Node.js + Express + TypeScript* API layer and connect it to the existing frontend. |
-| 🚩 *2. Supabase & Structured Data* | Store users, Daily Check-Ins, workloads, subtasks, confirmed Stress Dump information, analysis state and Balance proposals. |
-| 🚩 *3. Deterministic Core Logic* | Implement non-AI rules for Check-In scoring, Energy and Control categories, workload demand, deadline-window feasibility, workload/demand distribution, Manageable / Strained / Overloaded evidence and missing-data handling. |
-| 🚩 *4. Stress Dump AI* | Connect Gemini to understand natural language, identify candidate stress factors, workloads, updates and subtasks, then return proposed structured data for user confirmation. |
-| 🚩 *5. Analysis AI* | Use Gemini to interpret system-generated facts and explain workload state, constraints, contributors, Stress–Load mismatch and relevant patterns. |
-| 🚩 *6. Balance Planner* | Implement *Keep · Move / Delay · Reduce · Remove · Reconsider · Recover* decision logic, with Gemini supporting explanations and trade-off discussion. |
-| 🚩 *7. Google Calendar Integration* | Import Google Calendar events as *Fixed / Busy time* to support scheduling availability, time feasibility and Balance decisions. |
-| 🚩 *8. Frontend–Backend Integration* | Replace staged prototype behaviour with persistent records, live system calculations, dynamic AI explanations, contextual Squirrel responses and real Balance proposals. |
-| 🚩 *9. End-to-End Testing* | Test the full flow: *Garden → Tree Hole → Confirm Information → Analyse → Recognise → Restore Balance → Review → Apply → Refresh*. |
+| **1. Backend Foundation** | Build the **Node.js + Express + TypeScript** API layer and connect it to the existing frontend. |
+| **2. Supabase & Structured Data** | Store users, Daily Check-Ins, workloads, subtasks, confirmed Stress Dump information, analysis state and Balance proposals. |
+| **3. Deterministic Core Logic** | Implement non-AI rules for Check-In scoring, Energy and Control categories, workload demand, deadline-window feasibility, workload/demand distribution, Manageable / Strained / Overloaded evidence and missing-data handling. |
+| **4. Stress Dump AI** | Connect Gemini to understand natural language, identify candidate stress factors, workloads, updates and subtasks, then return proposed structured data for user confirmation. |
+| **5. Analysis AI** | Use Gemini to interpret system-generated facts and explain workload state, constraints, contributors, Stress–Load mismatch and relevant patterns. |
+| **6. Balance Planner** | Implement **Keep · Move / Delay · Reduce · Remove · Reconsider · Recover** decision logic, with Gemini supporting explanations and trade-off discussion. |
+| **7. Google Calendar Integration** | Import Google Calendar events as **Fixed / Busy time** to support scheduling availability, time feasibility and Balance decisions. |
+| **8. Frontend–Backend Integration** | Replace staged prototype behaviour with persistent records, live system calculations, dynamic AI explanations, contextual Squirrel responses and real Balance proposals. |
+| **9. End-to-End Testing** | Test the full flow: **Garden → Tree Hole → Confirm Information → Analyse → Recognise → Restore Balance → Review → Apply → Refresh**. |
 
 ---
+
+<a id="build-scope"></a>
 
 ## 5.5 🎯 Build Scope
 
