@@ -135,10 +135,11 @@ Throughout the process, we kept asking:
 > <i>“How can we help an overwhelmed student not only feel better, but actually understand what is happening and decide what should change?”</i>
 
 <br>
-<details>
-<summary><strong><h3> 🚩 Stage 1 — <i>Two Different Starting Directions</i> </h3></strong></summary>
+<details><summary><strong> 🚩 Stage 1 — <i>Two Different Starting Directions</i></strong></summary>
 
 <br>
+
+### Stage 1
 Our ideas start from two perspectives. 
 
 #### 📋 A) Workload & Decision-Making
@@ -163,10 +164,11 @@ Neither direction was enough on its own. We decided to create an app that **conn
 </details>
 
 <details>
-<summary><strong><h3> 🚩 Stage 2 — <i>Turning “Balance” Into a Structured Concept</i> </h3></strong></summary>
+<summary><strong> 🚩 Stage 2 — <i>Turning “Balance” Into a Structured Concept</i></strong></summary>
 
 <br>
 
+### Stage 2
 Our next question was: **What do stress, capacity and balance actually mean?**
 
 🚫We could not assume: **More tasks = more stress.**
@@ -199,10 +201,11 @@ We also recognised that **perceived stress matters**. A workload can appear mana
 </details>
 
 <details>
-<summary><strong><h3> 🚩 Stage 3 — <i>Turning Theory Into App Inputs</i> </h3></strong></summary>
+<summary><strong> 🚩 Stage 3 — <i>Turning Theory Into App Inputs</i></strong></summary>
 
 <br>
 
+### Stage 3
 Theory alone was not enough. We needed realistic ways to collect meaningful information **without asking overwhelmed users to complete long assessments every day**. We therefore translated the concepts from our research into lightweight app inputs:
 
 | **App Input** | **Purpose** | **What It Provides** |
@@ -230,10 +233,11 @@ But another problem appeared...
 </details>
 
 <details>
-<summary><strong><h3> 🚩 Stage 4 — <i>From Many Features to One Clear Purpose</i> </h3></strong></summary>
+<summary><strong> 🚩 Stage 4 — <i>From Many Features to One Clear Purpose</i></strong></summary>
 
 <br>
 
+### Stage 4
 **After Mentor Consultation #1**, we realised that **adding more solutions did not automatically make ReRoot stronger**. Some features were interesting, but they distracted from the main question:
 
 > <i>“What should the user actually do when their current situation is no longer sustainable?”</i>
@@ -256,10 +260,11 @@ Rather than looking only at urgency and importance, ReRoot also considers the us
 </details>
 
 <details>
-<summary><strong><h3> 🚩 Stage 5 — <i>Complete, But Not Yet Distinctive</i> </h3></strong></summary>
+<summary><strong> 🚩 Stage 5 — <i>Complete, But Not Yet Distinctive</i></strong></summary>
 
 <br>
 
+### Stage 5
 With these decisions made, we began building the prototype. Our system now consisted of:
 
 - Daily Check-In
@@ -279,10 +284,11 @@ So we began rethinking **how users should experience the system**, rather than c
 </details>
 
 <details>
-<summary><strong><h3> 🚩 Stage 6 — <i>From Dashboard to a Living Ecosystem 🌳</i> </h3></strong></summary>
+<summary><strong> 🚩 Stage 6 — <i>From Dashboard to a Living Ecosystem 🌳</i></strong></summary>
 
 <br>
 
+### Stage 6
 During earlier brainstorming, we noticed similarities between **apple-tree growth cycles🍎** and sustainable workload management.
 
 When an apple tree carries too much fruit, it consumes significant resources. Orchard management practices such as **fruit thinning** reduce excessive load and help support healthier long-term growth.
@@ -320,10 +326,11 @@ We deliberately kept the metaphor simple rather than turning ReRoot into a full 
 </details>
 
 <details>
-<summary><strong><h3> 🌱 Final Direction — <i>Dump, Recognise, Rebalance</i> </h3></strong></summary>
+<summary><strong> 🌱 Final Direction — <i>Dump, Recognise, Rebalance</i></strong></summary>
 
 <br>
 
+### Final 
 Throughout this process, ReRoot evolved from a broad collection of stress and task-management ideas into a **decision-support system**.
 
 | Stage | Purpose |
