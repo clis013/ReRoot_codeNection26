@@ -602,7 +602,7 @@ Instead:
 
 > **User Input → AI Extraction → User Review → Confirmation → Structured Record**
 
-The user can review, edit or reject the extracted information before it becomes part of their records.
+The user can **review, edit or reject** the extracted information before it becomes part of their records.
 
 This keeps the user in control while allowing AI to reduce the effort required to organise their thoughts.
 
