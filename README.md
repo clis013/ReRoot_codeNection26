@@ -526,7 +526,7 @@ The following comparison highlights the key features that differentiate ReRoot f
 
 <br>
 
-
+---
 
 ## 4.1 🌳 Ecosystem Visualisation of User Condition
 
@@ -550,13 +550,7 @@ Different elements of the ecosystem represent different aspects of the user's cu
 
 ### 🌱 Why the Ecosystem Matters
 
-The ecosystem transforms abstract information into a simple visual language:
-
-- **🌳 Tree condition** → Overall workload state
-- **☀️ Weather** → Current perceived stress
-- **🍎 Apples** → Workload records and progress
-- **🍃 Leaves** → Daily condition
-- **🧑‍🌾 Gardener** → The user
+The ecosystem transforms abstract information into a simple visual language.
 
 This allows users to notice changes in their condition without having to interpret a dashboard first.
 
@@ -564,7 +558,7 @@ This allows users to notice changes in their condition without having to interpr
 
 <br>
 
-
+---
 
 ## 4.2 🐿️ AI Dump Chat & Companion AI
 
@@ -646,7 +640,7 @@ The Squirrel AI acts as the user-facing companion across this process, while the
 
 <br>
 
-
+---
 
 ## 4.3 🌿 Emotional Recovery & Workload Balance Planning
 
@@ -801,16 +795,6 @@ ReRoot does not allow the LLM to directly control the application. The system fi
 <p align="center">
   <img src="./assets/SAD.png" alt="ReRoot Dump Process" width="800">
 </p>
-
-
-The **garden homepage** acts as a low-cognitive-load visualisation layer above the system:
-
-- 🌳 **Tree condition** → Demand–Resource Status
-- ☀️🌧️ **Weather** → Current perceived stress
-- 🍎 **Apples** → Workload records
-- 🐿️ **Squirrel** → Contextual AI interaction
-
-The garden does not replace the underlying analysis. It provides a simpler way for users to recognise what the system is telling them.
 
 ---
 
