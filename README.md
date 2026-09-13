@@ -480,7 +480,7 @@ Users enter the **Tree Hole** to freely express their stressful thoughts, worklo
 </p>
 
 
-### 🌳 2. Understand
+### 🌳 2. Recognise
 
 ReRoot analyses the information provided by the user and helps them understand their current workload, stress level and overall condition.
 
@@ -804,48 +804,10 @@ ReRoot does not allow the LLM to directly control the application. The system fi
 
 ### 📌 System Architecture Diagram
 
-```mermaid
-flowchart LR
+<p align="center">
+  <img src="./assets/SAD.png" alt="ReRoot Dump Process" width="800">
+</p>
 
-    U([👤 User])
-
-    FE["🌱 ReRoot Frontend<br/>React + Vite + TypeScript"]
-
-    subgraph BE["⚙️ Backend — Node.js + Express"]
-        direction TB
-
-        INPUT["Confirmed Structured Data"]
-        LOGIC["Deterministic Processing<br/>• Check-In Scoring<br/>• Workload Processing<br/>• Time Feasibility<br/>• Demand Analysis"]
-        FACTS["System Facts<br/>Manageable / Strained / Overloaded"]
-        INTERPRET["AI Interpretation"]
-        BALANCE["Balance Recommendations"]
-        CONFIRM["User Review & Confirmation"]
-
-        INPUT --> LOGIC
-        LOGIC --> FACTS
-        FACTS --> INTERPRET
-        INTERPRET --> BALANCE
-        BALANCE --> CONFIRM
-    end
-
-    GEMINI["🤖 Gemini API"]
-    DB[("🗄️ Supabase<br/>Database + Auth")]
-    CAL["📅 Google Calendar API"]
-
-    U --> FE
-    FE -->|"API Requests"| INPUT
-
-    CAL -->|"Fixed / Busy Events"| LOGIC
-
-    FACTS -->|"Context + Facts"| GEMINI
-    GEMINI -->|"Interpretation"| INTERPRET
-
-    BALANCE -->|"Planning Prompt"| GEMINI
-    GEMINI -->|"Suggestions"| BALANCE
-
-    CONFIRM -->|"Persistent Changes"| DB
-    DB -->|"Stored User Data"| INPUT
-```
 
 The **garden homepage** acts as a low-cognitive-load visualisation layer above the system:
 
